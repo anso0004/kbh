@@ -1,12 +1,278 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
+import Button from "../components/Button.astro";
+// import Link from "../components/Link.astro";
+// import { Image } from "astro:assets";
+// import billede1 from "../assets/images/bogen2/src/agfa-genanvendeligt-kamera-35mm-5.jpg";
+// import billede3 from "../assets/images/bogen/_6090016.jpg";
+// import billede4 from "../assets/images/bogen/_6090022.jpg";
+// import billede5 from "../assets/images/bogen/0008.jpg";
+// import billede6 from "../assets/images/bogen/billede2.jpg";
+// import billede7 from "../assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-11.jpg";
+// import billede8 from "../assets/images/bogen/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg";
+// import bogen1 from "../assets/images/k1.jpg";
+// import bogen2 from "../assets/images/k2.jpg";
+// import bogen3 from "../assets/images/k3.jpg";
+// import forfatter from "../assets/images/forfatter.jpg";
+
+// const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => {
+//   return files.map((file) => file.default);
+// });
+// const images = await Astro.glob("/src/assets/images/bogen/*").then((files) => {
+//   return files.map((file) => file.default);
+// });
 ---
+
+<!-- 
+Padding md: p-5, ellers p-3
+
+
+-->
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-	</article>
+  <!-- Sektion 1 -->
+  <section class="grid md:grid-cols-5 pt-20 gap-6 pb-20">
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <!-- <Image src={billede1} alt="billede nr 1" class="col-span-3" /> -->
+    <!-- <img src="src/assets/images/kobenhavnerbilleder-sten-simons.jpg" alt="" /> -->
+    <div class="col-span-2">
+      <h2 class="text-2xl">Københavnerbilleder - en guide til hipster foto</h2>
+      <h2 class="text-2xl italic">af Sten Simons</h2>
+      <p class="pt-6 pb-4">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
+      <Button>Køb bogen</Button>
+    </div>
+  </section>
+
+  <!-- Sektion 2 -->
+  <section class="max-w-3xl mx-auto grid md:grid-cols-2 gap-6 pb-20">
+    <li class="list-none"><span class="font-bold">Titel:</span> Københavnerbilleder - en guide til hipster foto</li>
+    <li class="list-none">Forfatter: Sten Simons</li>
+    <li class="list-none">Antal sider: 344</li>
+    <li class="list-none">Forlag: Mellem Linjerne</li>
+    <li class="list-none">ISBN: 987-6-987654-32-1</li>
+    <li class="list-none">Pris: 399.-</li>
+  </section>
+  <!-- Sektion 3 -->
+  <section class="max-w-7xl mx-auto grid md:grid-cols-3 gap-6 pb-20">
+    <!-- <Image src={bogen3} alt="billede nr 1" class="" />
+    <Image src={bogen2} alt="billede nr 1" class="" />
+    <Image src={bogen1} alt="billede nr 1" class="" /> -->
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+  </section>
+
+  <!-- Sektion 4 -->
+  <section class="max-w-7xl mx-auto pb-20">
+    <h2 class="text-2xl py-6">Bogens kapitler</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-xl">Kapitel 1 - Intro til street foto</h3>
+        <p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 2 - Om at skyde street</h3>
+        <p>Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 3 - Om at finde det rette motiv</h3>
+        <p>Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 4 - Digital street foto</h3>
+        <p>De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 5 - Analog street foto</h3>
+        <p>Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 6 - Om at skyde sort/hvid</h3>
+        <p>Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 7 - Kreative teknikker</h3>
+        <p>Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+      </div>
+      <div>
+        <h3 class="text-xl">Kapitel 8 - Kom helt tæt på!</h3>
+        <p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
+      </div>
+    </div>
+  </section>
+  <!-- Sektion 5 -->
+  <section class="max-w-7xl mx-auto pb-20">
+    <h2 class="text-2xl py-6">Anmeldelser af bogen</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div>
+        <!-- STJERNER 5/6-->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+
+        <p>Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+        <p>Hanne Hovgaard, Berlingeren</p>
+      </div>
+      <div>
+        <!-- STJERNER 4/5--->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+
+        <p>Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
+        <p>Kim Kloggaard, Fotojournalen.dk</p>
+      </div>
+      <div>
+        <!-- STJERNER 6/6--->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"></path>
+        </svg>
+        <p>Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+        <p>Volmer Hansen, Lukkertiden.dk</p>
+      </div>
+    </div>
+  </section>
+  <!-- Sektion 6 -->
+  <section class="md:max-w-7xl mx-auto grid md:grid-cols-3 gap-6 pb-20">
+    <!-- <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" />
+    <Image src={billede6} alt="billede nr 1" class="" /> -->
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+    <img src="src/assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" />
+  </section>
+
+  <!-- <section>
+    <div class="columns-2 md:grid-rows-3 lg:columns-4">
+      {
+        images.map(({ src }) => (
+          <div class="">
+            <img src={src} class="mb-4" alt="" loading="lazy" />
+          </div>
+        ))
+      }
+    </div>
+  </section> -->
+  <!-- Sektion 7 -->
+  <section class="max-w-3xl mx-auto grid md:grid-cols-2 pb-20">
+    <div>
+      <h2 class="text-2xl">Forfatteren</h2>
+      <div class="w-72 h-72 overflow-hidden">
+        <Image src={forfatter} alt="billede nr 1" class="object-cover w-full h-full" />
+      </div>
+    </div>
+    <div>
+      <p class="">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”</p>
+      <p>Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</p>
+    </div>
+  </section>
+  <!-- Sektion 8 FROM -->
+  <section id="tilmelding" class="max-w-lg mx-auto mt-32 p-4">
+    <h2 class="text-4xl font-bold pb-4">Tilmeld dig</h2>
+    <form class="space-y-4 grid grid-cols-1 gap-6">
+      <div class="">
+        <label for="antal">Antal:</label>
+        <input class="" type="number" name="" id="antal" placeholder="1" />
+      </div>
+
+      <div class="">
+        <span>Levering:</span>
+        <!-- <input type="radio" id="forud" name="levering" checked="checked" />
+        <label for="forud">Forudbetaling</label> -->
+        <input type="radio" id="post" name="levering" />
+        <label for="kredit">PostDK</label>
+        <input type="radio" id="afhent" name="levering" />
+        <label for="kontant">Afhent</label>
+      </div>
+
+      <div class="grid gap-3">
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn" placeholder="Anders And" />
+      </div>
+
+      <div class="grid gap-3">
+        <label for="adresse">Adresse:</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Paradisæblevej 8" />
+      </div>
+
+      <div class="grid gap-3 grid-cols-6">
+        <label for="postnummer" class="col-span-6">Postnummer & by:</label>
+        <input type="text" id="postnummer" name="postnummer" class="col-span-2" placeholder="0900" />
+        <input type="text" id="bynavn" name="bynavn" disabled class="col-span-4" placeholder="Andeby C" />
+      </div>
+
+      <div class="grid gap-3">
+        <label for="telefon">Telefon:</label>
+        <input type="tel" id="telefon" name="telefon" placeholder="555-555" />
+      </div>
+
+      <div class="">
+        <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" />
+        <label for="nyhedsbrev">Ja tak til nyhedsbreve og tilbud</label>
+      </div>
+
+      <div class="flex justify-end">
+        <Button variant="primary" size="medium">Til betaling</Button>
+      </div>
+    </form>
+  </section>
+
+  <!-- <article>
+    <h1>Index overskrift</h1>
+    <Button>Klik!</Button>
+    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
+  </article> -->
 </MainLayout>
