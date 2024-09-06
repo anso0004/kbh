@@ -2,44 +2,16 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
-
-// import Link from "../components/Link.astro";
-// import { Image } from "astro:assets";
-// import billede1 from "../assets/images/bogen2/src/agfa-genanvendeligt-kamera-35mm-5.jpg";
-// import billede3 from "../assets/images/bogen/_6090016.jpg";
-// import billede4 from "../assets/images/bogen/_6090022.jpg";
-// import billede5 from "../assets/images/bogen/0008.jpg";
-// import billede6 from "../assets/images/bogen/billede2.jpg";
-// import billede7 from "../assets/images/bogen2/agfa-genanvendeligt-kamera-35mm-11.jpg";
-// import billede8 from "../assets/images/bogen/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg";
-// import bogen1 from "../assets/images/k1.jpg";
-// import bogen2 from "../assets/images/k2.jpg";
-// import bogen3 from "../assets/images/k3.jpg";
-// import forfatter from "../assets/images/forfatter.jpg";
-
-// const images = await Astro.glob("/src/assets/images/galleri/*").then((files) => {
-//   return files.map((file) => file.default);
-// });
-// const images = await Astro.glob("/src/assets/images/bogen/*").then((files) => {
-//   return files.map((file) => file.default);
-// });
 ---
 
-<!-- 
-Padding md: p-5, ellers p-3
-
-
--->
 <MainLayout title="Titel">
   <!-- Sektion 1 -->
   <section class="grid md:grid-cols-5 pt-20 gap-6 mb-40">
     <img class="col-span-3" src="/bogen2/sten-simonsbog.jpg" alt="" />
-    <!-- <Image src={billede1} alt="billede nr 1" class="col-span-3" /> -->
     <div class="col-span-2">
       <h2 class="text-2xl font-bold">Københavnerbilleder - en guide til hipster foto</h2>
       <h2 class="text-2xl italic">af Sten Simons</h2>
       <p class="pt-6 pb-4">Københavnerbilleder er de danske streetfotografers bibel: Det er en fusion mellem et kunstværk og en lærebog. Bogen gennemgår alle væsentlige aspekter af streetfotografering fra grundlæggende teknik til kreative eksperimenter. Alt sammen krydret med masser af inspirerende fotos. God læselyst!</p>
-      <!-- <Button variant="primary" size="small">Køb bogen</Button> -->
       <div class="pt-5">
         <Link href="https://kea.dk" target="_blank" variant="primary" size="medium">Download et kapitel<Link /> </Link>
       </div>
@@ -60,9 +32,6 @@ Padding md: p-5, ellers p-3
 
   <!-- Sektion 3 -->
   <section class="slide3 max-w-7xl mx-auto grid md:grid-cols-3 gap-6 mb-40">
-    <!-- <Image src={bogen3} alt="billede nr 1" class="" />
-    <Image src={bogen2} alt="billede nr 1" class="" />
-    <Image src={bogen1} alt="billede nr 1" class="" /> -->
     <img src="/bogen2/sten-simonsbog.jpg" alt="" />
     <img src="/bogen2/oppefra.jpg" alt="" />
     <img src="/bogen2/venstre.jpg" alt="" />
@@ -188,15 +157,6 @@ Padding md: p-5, ellers p-3
   </section>
   <!-- Sektion 6 -->
   <section id="kbhbilleder" class="slide6 md:max-w-7xl mx-auto grid md:grid-cols-3 gap-6 mb-40">
-    <!-- <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" />
-    <Image src={billede6} alt="billede nr 1" class="" /> -->
     <div class="w-96 h-64 overflow-hidden">
       <img src="/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" class="object-cover w-full h-full" />
     </div>
@@ -224,36 +184,14 @@ Padding md: p-5, ellers p-3
     <div class="w-96 h-64 overflow-hidden">
       <img src="/bogen2/lomo-smena-20.jpg" alt="" class="object-cover w-full h-full" />
     </div>
-
-    <!-- <img src="/bogen2/agfa-genanvendeligt-kamera-35mm-5.jpg" alt="" class="w-auto h-72" /> -->
-    <!-- <img src="/bogen2/orestad-til-islands-brygge-pentax-auto-110.jpg" alt="" />
-    <img src="/bogen2/nikkormat-ft2-remiseparken-2.jpg" alt="" />
-    <img src="/bogen2/anamorfiske-landskaber-amager-faelled-4.jpg" alt="" />
-    <img src="/bogen2/agfa-genanvendeligt-kamera-35mm-8.jpg" alt="" />
-    <img src="/bogen2/orestad-til-islands-brygge-pentax-auto-110-24.jpg" alt="" />
-    <img src="/bogen2/lomo-smena-20.jpg" alt="" />
-    <img src="/bogen2/foraar-med-et-agfa-le-box-2021-17.jpg" alt="" />
-    <img src="/bogen2/amarminoen-med-et-agfa-le-box-3.jpg" alt="" /> -->
   </section>
 
-  <!-- <section>
-    <div class="columns-2 md:grid-rows-3 lg:columns-4">
-      {
-        images.map(({ src }) => (
-          <div class="">
-            <img src={src} class="mb-4" alt="" loading="lazy" />
-          </div>
-        ))
-      }
-    </div>
-  </section> -->
   <!-- Sektion 7 -->
   <section id="forfatter" class="slide7 max-w-3xl mx-auto grid md:grid-cols-2 mb-40">
     <div>
       <h2 class="text-2xl font-bold pb-5">Forfatteren</h2>
       <div class="w-72 h-72 overflow-hidden">
         <img src="/bogen2/sten_simons.jpg" alt="" class="object-cover w-full h-full pb-5" />
-        <!-- <Image src={forfatter} alt="billede nr 1" class="object-cover w-full h-full" /> -->
       </div>
     </div>
     <div>
@@ -267,13 +205,11 @@ Padding md: p-5, ellers p-3
     <form class="space-y-4 grid grid-cols-1 gap-6">
       <div class="">
         <label for="antal">Antal:</label>
-        <input class="" type="number" name="" id="antal" placeholder="1" />
+        <input class="rounded" type="number" name="" id="antal" placeholder="1" />
       </div>
 
       <div class="">
         <span>Levering:</span>
-        <!-- <input type="radio" id="forud" name="levering" checked="checked" />
-        <label for="forud">Forudbetaling</label> -->
         <input type="radio" id="post" name="levering" />
         <label for="kredit">PostDK</label>
         <input type="radio" id="afhent" name="levering" />
@@ -282,23 +218,23 @@ Padding md: p-5, ellers p-3
 
       <div class="grid gap-3">
         <label for="navn">Navn:</label>
-        <input type="text" id="navn" name="navn" placeholder="Anders And" />
+        <input class="rounded" type="text" id="navn" name="navn" placeholder="Anders And" />
       </div>
 
       <div class="grid gap-3">
         <label for="adresse">Adresse:</label>
-        <input type="text" id="adresse" name="adresse" placeholder="Paradisæblevej 8" />
+        <input class="rounded" type="text" id="adresse" name="adresse" placeholder="Paradisæblevej 8" />
       </div>
 
       <div class="grid gap-3 grid-cols-6">
         <label for="postnummer" class="col-span-6">Postnummer & by:</label>
-        <input type="text" id="postnummer" name="postnummer" class="col-span-2" placeholder="0900" />
-        <input type="text" id="bynavn" name="bynavn" disabled class="col-span-4" placeholder="Andeby C" />
+        <input class="rounded" type="text" id="postnummer" name="postnummer" class="col-span-2" placeholder="0900" />
+        <input class="rounded" type="text" id="bynavn" name="bynavn" disabled class="col-span-4" placeholder="Andeby C" />
       </div>
 
       <div class="grid gap-3">
         <label for="telefon">Telefon:</label>
-        <input type="tel" id="telefon" name="telefon" placeholder="555-555" />
+        <input class="rounded" type="tel" id="telefon" name="telefon" placeholder="555-555" />
       </div>
 
       <div class="">
@@ -311,20 +247,7 @@ Padding md: p-5, ellers p-3
       </div>
     </form>
   </section>
-
-  <!-- <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-  </article> -->
 </MainLayout>
-
-<style>
-  /* .link:hover {
-    animation: jello;
-    animation-duration: 5s;
-  } */
-</style>
 
 <script>
   import { inView } from "motion";
@@ -346,7 +269,6 @@ Padding md: p-5, ellers p-3
   inView(stjerne3, () => {
     stjerne3.classList.add("animate__animated", "animate__flash", "animate__delay-1s");
   });
-  // INVIEW TIL KAPITLER
 
   const slide2 = document.querySelector(".slide2");
 
