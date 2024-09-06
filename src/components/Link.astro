@@ -2,11 +2,11 @@
 // Henter parametrene fra Astro.props
 const { href = "#", target = "_self", variant = "textlink", size = "standard" } = Astro.props;
 
-const linkStyling = "text-white rounded";
+const linkStyling = "text-black rounded";
 const variantClasses = {
-  textlink: "text-black underline",
-  primary: "bg-orange-500/100 hover:bg-orange-700",
-  secondary: "bg-slate-500/100 hover:bg-slate-700",
+  textlink: "text-black",
+  primary: "bg-orange-500/100 hover:bg-orange-700 text-white ",
+  secondary: "bg-slate-500/100 hover:bg-slate-700 text-white ",
 };
 const sizeClasses = {
   small: "px-2 py-2",
