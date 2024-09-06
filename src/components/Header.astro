@@ -1,5 +1,32 @@
 ---
+import Link from "../components/Link.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="p-4 fixed lg:static w-full bg-orange-100">
+  <div id="navbar" class="flex flex-row justify-between">
+    <div id="logo" class="">
+      <a href="#link1">Site logo</a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-4">
+        <li class=""><Link href="#">Bøger</Link></li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+        <li class=""><Link href="#">Film</Link></li>
+        <li class=""><Link href="#">Om</Link></li>
+        <li class=""><Link href="#">Kontakt</Link></li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
+      ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 inline">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobilmenu" class="flex flex-col content-center pt-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+    <ul>
+      <li class="text-center py-2 border-b-2 border-orange-100"><Link href="#">Bøger</Link></li>
+      <li class="text-center py-2 border-b-2 border-orange-100"><Link href="#">Film</Link></li>
+      <li class="text-center py-2 border-y-2 border-orange-100"><Link href="#">Om</Link></li>
+      <li class="text-center py-2 border-b-2 border-orange-100"><Link href="#">Kontakt</Link></li>
+    </ul>
+  </nav>
 </div>
